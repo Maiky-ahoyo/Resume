@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/ec46b80c81.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/fonts.css" />
+  <link rel="stylesheet" href="/static/css/output.css" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <link rel="icon" href="/static/images/favicon.avif" type="image/x-icon" />
+  <meta name="description" content="This is my portfolio where I show my projects and skills" />
+</head>
+
+<body class="text-white font-poppins text-wrap"
+  style="background: radial-gradient(150% 130% at 50% 10%, #000 40%, rgb(66, 1, 247) 100%); background-attachment: fixed;">
+  <header class="bg-black fixed flex justify-between items-center top-0 left-0 h-20 w-full z-10 text-3xl">
+    <div class="md:hidden flex w-full relative">
+      <button id="menu_button"
+        class="flex h-full items-center hover:text-primary transition duration-500 text-4xl ml-6">
+        <i class="fa-regular fa-bars"></i>
+      </button>
+      <div id="mobile_menu" class="menu-transition menu-hidden bg-black items-center w-full px-4 absolute top-12">
+        <a onclick="scrollToStart('home')">
+          <button class="hover:bg-primary rounded-2xl transition duration-500 pl-4 py-2 mb-3 w-full">
+            <i class="fa-regular fa-home"><span class="font-poppins ml-2">Home</span></i>
+          </button>
+        </a>
+        <a onclick="scrollToStart('my_experience')">
+          <button class="hover:bg-primary rounded-2xl transition duration-500 pl-4 py-2 mb-3 w-full">
+            <i class="fa-regular fa-briefcase"><span class="font-poppins ml-2">My Experience</span></i>
+          </button>
+        </a>
+        <a onclick="scrollToStart('my_projects')">
+          <button class="hover:bg-primary rounded-2xl transition duration-500 pl-4 py-2 mb-3 w-full">
+            <i class="fa-regular fa-display-code"><span class="font-poppins ml-2">My Projects</span></i>
+          </button>
+        </a>
+        <a onclick="scrollToStart('hire_me')">
+          <button
+            class="hover:bg-white text-primary ext-primary rounded-2xl transition duration-500 pl-4 py-2 my-3 w-full">
+            <i class="fa-regular fa-face-smile-wink"><span class="font-poppins ml-2">Hire Me</span></i>
+          </button>
+        </a>
+      </div>
+      <div class="flex gap-6 absolute right-6">
+        <a href="https://mx.linkedin.com/in/miguel-angel-arroyo-lópez-ab322027b" target="_blank">
+          <button class="flex h-full items-center hover:text-primary transition duration-500 text-4xl">
+            <i class="fa-brands fa-linkedin"></i>
+          </button>
+        </a>
+        <a href="https://github.com/Maiky-ahoyo" target="_blank">
+          <button class="flex h-full items-center hover:text-primary transition duration-500 text-4xl">
+            <i class="fa-brands fa-github"></i>
+          </button>
+        </a>
+        <a href="https://wa.me/526311130239" target="_blank">
+          <button class="flex h-full items-center hover:text-primary transition duration-500 text-4xl">
+            <i class="fa-brands fa-whatsapp"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="hidden md:flex justify-between items-center w-full px-4">
+      <div class="flex lef-4 gap-6 ">
+        <a onclick="scrollToStart('home')">
+          <button class="hover:text-primary p-2 transition duration-500 flex">
+            <i class="fa-regular fa-home"><span class="hidden lg:inline-flex font-poppins ml-2">Home</span></i>
+          </button>
+        </a>
+        <a onclick="scrollToStart('my_experience')">
+          <button class="hover:text-primary p-2 transition duration-500 flex">
+            <i class="fa-regular fa-briefcase"><span class="hidden lg:inline-flex font-poppins ml-2">My
+                Experience</span></i></button>
+        </a>
+        <a onclick="scrollToStart('my_projects')">
+          <button class="hover:text-primary p-2 transition duration-500 flex">
+            <i class="fa-regular fa-display-code"><span class="hidden lg:inline-flex font-poppins ml-2">My
+                Projects</span></i>
+          </button>
+        </a>
+      </div>
+      <a onclick="scrollToStart('hire_me')">
+        <button class="hover:bg-white text-primary p-3 rounded-2xl transition duration-500">
+          <i class="fa-regular fa-face-smile-wink"></i><span class="font-poppins ml-2">Hire Me</span>
+        </button>
+      </a>
+    </div>
+  </header>
+  <div
+    class="hidden md:fixed md:flex md:flex-col justify-center right-0 bg-primary w-fit h-fit px-2 py-2 text-3xl rounded-l-xl top-[39%]">
+    <a href="https://mx.linkedin.com/in/miguel-angel-arroyo-lópez-ab322027b" target="_blank">
+      <div class="hover:text-black p-1 transition duration-500">
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </a>
+    <a href="https://github.com/Maiky-ahoyo" target="_blank">
+      <div class="hover:text-black p-1 transition duration-500">
+        <i class="fa-brands fa-github"></i>
+      </div>
+    </a>
+    <a href="https://wa.me/526311130239" target="_blank">
+      <div class="hover:text-black p-1 transition duration-500">
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </a>
+  </div>
+  <div class="h-full w-full items-center mt-20">
+    <section class="lg:grid lg:grid-cols-2 lg:gap-6 items-center justify-center text-center w-3/4 m-auto py-10"
+      id="home">
+      <div>
+        <h1 class="text-5xl font-bold text-primary font-montserrat">Welcome to My Portfolio</h1>
+        <p class="text-2xl mt-4">I’m Miguel Arroyo, a passionate software developer with expertise in web and
+          mobile application development. My goal is to create innovative, user-friendly solutions that enhance
+          businesses and streamline processes. With experience in diverse programming languages and frameworks, I pride
+          myself on delivering efficient and scalable software.</p>
+        <div class="hidden lg:flex gap-6 place-content-center mt-5">
+          <button id="download_button"
+            class="bg-primary px-4 py-2 rounded-lg hover:bg-white hover:text-primary duration-300"><i
+              class="fa-regular fa-file-arrow-down"><span class="font-poppins ml-2">Download my
+                CV</span></i></button>
+          <button id="watch_button"
+            class="bg-primary px-4 py-2 rounded-lg hover:bg-white hover:text-primary duration-300"><i
+              class="fa-regular fa-camera-movie"><span class="font-poppins ml-2">Watch my CV</span></i></button>
+        </div>
+      </div>
+      <img src="/static/images/Miguel.png" alt="My picture" class="rounded-full -z-10 mx-auto mt-8 lg:mt-0" />
+      <div class="lg:hidden md:flex gap-6 place-content-center mt-8">
+        <button id="download_button"
+          class="bg-primary px-4 py-2 rounded-lg hover:bg-white hover:text-primary duration-300"><i
+            class="fa-regular fa-file-arrow-down"><span class="font-poppins ml-2">Download my
+              portfolio</span></i></button>
+        <button id="watch_button"
+          class="bg-primary px-4 py-2 rounded-lg hover:bg-white hover:text-primary duration-300 mt-4 md:mt-0"><i
+            class="fa-regular fa-camera-movie"><span class="font-poppins ml-2">Watch my portfolio</span></i></button>
+      </div>
+    </section>
+    <div class="w-3/4 m-auto mb-4 mt-8 text-center justify-items-center">
+      <h2 class="text-4xl font-bold text-primary pb-4 font-montserrat">My Services</h2>
+      <div class="lg:grid grid-cols-3 justify-around gap-5 h-fit">
+        <div class="flex flex-col items-center self-center mt-6">
+          <i class="fa-solid fa-code fa-3x text-primary"></i>
+          <h3 class="text-2xl text-primary my-2 font-montserrat">Web Development</h3>
+          <p class="text-left">I specialize in crafting beautiful and functional websites tailored to your
+            unique needs. Whether you’re looking to build something from the ground up or improve your existing site,
+            I’m here to help bring your vision to life.</p>
+        </div>
+        <div class="flex flex-col items-center self-center mt-6">
+          <i class="fa-solid fa-mobile-android fa-3x text-primary"></i>
+          <h3 class="text-2xl text-primary my-2 font-montserrat">Mobile Development</h3>
+          <p class="text-left">In today's mobile-centric world, having a great app is essential. I develop
+            user-friendly mobile applications designed to engage your audience and provide a seamless experience,
+            whether you need a brand-new app or enhancements to your current one.</p>
+        </div>
+        <div class="flex flex-col items-center self-center mt-6">
+          <i class="fa-solid fa-laptop-code fa-3x text-primary"></i>
+          <h3 class="text-2xl text-primary my-2 font-montserrat">Software Development</h3>
+          <p class="text-left">From custom software solutions to system integrations, I provide
+            comprehensive software development services. Let me help you streamline your processes and achieve your
+            business goals with tailored software that fits your needs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-3/4 m-auto my-12">
+      <div class="wrapper">
+        <div class="item item1">
+          <img class="h-16 ml-14" src="/static/images/python.svg" alt="Python Logo" />
+        </div>
+        <div class="item item2">
+          <img class="h-16 ml-14" src="/static/images/java.svg" alt="Java Logo" />
+        </div>
+        <div class="item item3">
+          <img class="h-16 ml-14" src="/static/images/html5.svg" alt="HTML Logo" />
+        </div>
+        <div class="item item4">
+          <img class="h-16 ml-14" src="/static/images/css.svg" alt="CSS Logo" />
+        </div>
+        <div class="item item5">
+          <img class="h-16 ml-14" src="/static/images/django.svg" alt="Django Logo" />
+        </div>
+        <div class="item item6">
+          <img class="h-16 ml-14" src="/static/images/javascript.svg" alt="Java Script Logo" />
+        </div>
+        <div class="item item7">
+          <img class="h-16 ml-14" src="/static/images/react.svg" alt="React Logo" />
+        </div>
+        <div class="item item8">
+          <img class="h-16 ml-14" src="/static/images/php.svg" alt="PHP Logo" />
+        </div>
+        <div class="item item10">
+          <img class="h-16 ml-14" src="/static/images/tailwindcss.svg" alt="Tailwind Logo" />
+        </div>
+        <div class="item item11">
+          <img class="h-16 ml-14" src="/static/images/bootstrap.svg" alt="Bootstrap Logo" />
+        </div>
+        <div class="item item12">
+          <img class="h-16 ml-14" src="/static/images/sql.svg" alt="SQL Logo" />
+        </div>
+        <div class="item item13">
+          <img class="h-16 ml-14" src="/static/images/postgresql.svg" alt="PostgreSQL Logo" />
+        </div>
+        <div class="item item14">
+          <img class="h-16 ml-14" src="/static/images/mysql.svg" alt="MySQL Logo" />
+        </div>
+        <div class="item item15">
+          <img class="h-16 ml-14" src="/static/images/git.svg" alt="Git Logo" />
+        </div>
+        <div class="item item16">
+          <img class="h-16 ml-14" src="/static/images/github.svg" alt="Github Logo" />
+        </div>
+        <div class="item item17">
+          <img class="h-16 ml-14" src="/static/images/figma.svg" alt="Figma Logo" />
+        </div>
+        <div class="item item18">
+          <img class="h-16 ml-14" src="/static/images/docker.svg" alt="Docker Logo" />
+        </div>
+        <div class="item item9">
+          <img class="h-16 ml-14" src="/static/images/cypress.svg" alt="Cypress Logo" />
+        </div>
+      </div>
+    </div>
+    <div class="w-3/4 m-auto mb-6 text-center justify-items-center">
+      <h2 class="text-4xl font-bold text-primary mb-4 font-montserrat">My Soft Skills</h2>
+      <p class="text-left mx-5">
+        In the realm of software development, technical expertise is crucial, but it’s the soft skills that truly set me
+        apart
+        as a developer. I believe that effective communication, collaboration, and empathy are integral to delivering
+        high-quality solutions that resonate with clients and users alike.
+      </p><br>
+      <p class="text-left mx-5">
+        Here’s how my soft skills contribute to successful project outcomes:
+      </p><br>
+      <div class="md:grid md:grid-cols-2 lg:grid-cols-3 justify-around gap-5 h-fit text-left md:text-center mx-5">
+        <p class="mb-4">
+          <strong class="text-primary">Effective Communication:</strong> I ensure clear, open communication, actively
+          listening and articulating ideas to foster collaboration and reduce misunderstandings.
+        </p>
+        <p class="mb-4">
+          <strong class="text-primary">Team Collaboration:</strong> I work well in teams, valuing diverse perspectives
+          to drive innovation and successful outcomes.
+        </p>
+        <p class="mb-4">
+          <strong class="text-primary">Adaptability:</strong> I embrace change, staying open to feedback and adjusting
+          my approach to keep solutions relevant in a dynamic environment.
+        </p>
+        <p class="mb-4">
+          <strong class="text-primary">Problem-Solving Mindset:</strong> I approach challenges with a solution-focused
+          attitude, navigating complex problems efficiently.
+        </p>
+        <p class="mb-4">
+          <strong class="text-primary">Empathy and Understanding:</strong> I prioritize the needs of clients and users,
+          creating solutions that address their real challenges.
+        </p>
+        <p class="mb-4">
+          <strong class="text-primary">Time Management:</strong> I balance multiple tasks, prioritizing effectively to
+          meet deadlines without compromising quality.
+        </p>
+      </div>
+      <br>
+      <p class="text-justify px-5">
+        By combining these soft skills with my technical knowledge, I aim to create a positive experience for clients
+        and
+        stakeholders, ultimately delivering solutions that not only meet but exceed expectations.
+      </p>
+    </div>
+    <section id="my_experience">
+      <div class="w-3/4 m-auto mb-6 text-left justify-items-center">
+        <div class="lg:grid lg:grid-cols-2 gap-5 my-6">
+          <div class="self-center">
+            <h2 class="text-4xl font-bold text-primary mb-4 font-montserrat">Educational Experience</h2>
+            <p>I’m currently in my 5th semester of a 9-semester Computer Science program at the Universidad de Sonora.
+              Throughout my studies, I’ve gained a strong foundation in programming, algorithms, and software
+              development,
+              while also exploring areas like web development and database management. My academic journey has been
+              instrumental in building my technical skills and preparing me for real-world applications</p>
+          </div>
+          <div class="mx-auto mt-4 lg:mt-0">
+            <img src="/static/images/logo_unison.svg" alt="Unison Logo" class="max-h-[320px] mx-auto">
+          </div>
+        </div>
+        <div class="lg:grid lg:grid-cols-2 gap-5 my-6">
+          <div class="self-center">
+            <h2 class="text-4xl font-bold text-primary mb-4 font-montserrat">Professional Experience</h2>
+            <p>Alongside my studies, I am a member of CSI Pro Dev, a group within the university that focuses on
+              practical project development. As part of the team, I work on real-world tasks such as creating software
+              applications and building websites for various university departments. This experience has not only
+              sharpened my technical expertise but has also taught me how to work collaboratively in a professional
+              environment, delivering functional solutions that benefit the university community</p>
+          </div>
+          <div class="mx-auto mt-4 lg:mt-0">
+            <img src="/static/images/CSI_logo.jpg" alt="CSI Logo" class="max-h-[320px] mx-auto rounded-full">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="my_projects">
+      <div class="w-3/4 m-auto my-12 text-center justify-items-center">
+        <h2 class="text-4xl font-bold text-primary mb-4 font-montserrat">My Projects</h2>
+        <p class="text-left mx-5">
+          With a background in software development and a passion for learning, I’ve honed my skills through hands-on
+          experience and continuous education. Here’s a snapshot of my professional journey:
+        </p><br>
+        <div class="justify-around gap-5 h-fit text-left md:text-center mx-5">
+          <div class="lg:grid lg:grid-cols-2 gap-5 my-6">
+            <div class="self-center">
+              <h3 class="text-2xl text-primary my-2 font-montserrat font-bold">Thrifty Web Administrator</h3>
+              <p>This page was designed for the Thrifty ice cream branches in Puerto Peñasco. It serves as an
+                administrative panel, allowing the branches to register employees and automatically generate the
+                required documents for each staff member</p>
+            </div>
+            <div class="mx-auto mt-4 lg:mt-0 max-w-[512px]">
+              <img src="/static/images/thrifty_web_admin.png" alt="Thrifty Web Administrator Page" class="rounded-3xl">
+            </div>
+          </div>
+          <div class="lg:grid lg:grid-cols-2 gap-5 my-6">
+            <div class="hidden lg:flex">
+              <img src="/static/images/pestañeo_page.png" alt="Pestañeo Page" class="rounded-3xl">
+            </div>
+            <div class="self-center">
+              <h3 class="text-2xl text-primary my-2 font-montserrat font-bold">Pestañeo Page</h3>
+              <p>The "Pestañeo" platform introduces an efficient system for client registration, enabling clients to
+                sign digitally on a tablet during each procedure. Additionally, it streamlines appointment scheduling,
+                offering a more modern and convenient booking method</p>
+            </div>
+            <div class="flex lg:hidden mx-auto mt-4 lg:mt-0 max-w-[512px]">
+              <img src="/static/images/pestañeo_page.png" alt="Pestañeo Page" class="rounded-3xl">
+            </div>
+          </div>
+          <div class="lg:grid lg:grid-cols-2 gap-5 my-6">
+            <div class="self-center">
+              <h3 class="text-2xl text-primary my-2 font-montserrat font-bold">Dogs DB Admin</h3>
+              <p>This program was developed as a simulation of a veterinary database management system. It allows users
+                to view detailed information on all patients, track the procedures performed, and manage the
+                relationships between them</p>
+            </div>
+            <div class="mx-auto mt-4 lg:mt-0 max-w-[512px]">
+              <img src="/static/images/pawesome_friends.jpg" alt="Pawesome Friends Page" class="rounded-3xl">
+            </div>
+          </div>
+          <div class="lg:grid lg:grid-cols-2 gap-5 mt-6">
+            <div class="hidden lg:flex">
+              <img src="/static/images/academia_unbound.png" alt="Academia Unbound Page" class="rounded-3xl">
+            </div>
+            <div class="self-center">
+              <h3 class="text-2xl text-primary my-2 font-montserrat font-bold">Academia Unbound</h3>
+              <p>Academia Unbound is a platform that aggregates information from academic journals across various
+                websites, bringing them all together in one place. Users can apply filters to search for specific
+                content and are then directed to the official pages for further reading</p>
+            </div>
+            <div class="flex lg:hidden mx-auto mt-4 lg:mt-0 max-w-[512px]">
+              <img src="/static/images/academia_unbound.png" alt="Academia Unbound Page" class="rounded-3xl">
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="hire_me">
+      <form class="w-3/4 m-auto mb-6 justify-items-center">
+        <h2 class="text-4xl font-bold text-primary mb-4 font-montserrat text-center">Contact Me</h2>
+        <div class="mb-5">
+          <label class="block mb-2 text-sm font-medium text-primary">E-mail Adress</label>
+          <input class="bg-black text-sm rounded-lg block w-full p-2.5 border-white border-[1px] border-opacity-40"
+            placeholder="name@flowbite.com" required />
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-primary">First Name</label>
+            <input class="bg-black text-sm rounded-lg block w-full p-2.5 border-white border-[1px] border-opacity-40"
+              placeholder="John" required />
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-primary">Last Name</label>
+            <input class="bg-black text-sm rounded-lg block w-full p-2.5 border-white border-[1px] border-opacity-40"
+              placeholder="Doe" required />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-primary">Phone Number</label>
+            <input class="bg-black text-sm rounded-lg block w-full p-2.5 border-white border-[1px] border-opacity-40"
+              placeholder="123-456-7890" required />
+          </div>
+          <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-primary">Company</label>
+            <input class="bg-black text-sm rounded-lg block w-full p-2.5 border-white border-[1px] border-opacity-40"
+              placeholder="Google" required />
+          </div>
+        </div>
+        <div class="mb-5">
+          <label class="block mb-2 text-sm font-medium text-primary">Subject</label>
+          <input class="bg-black text-sm rounded-lg block w-full p-2.5 border-white border-[1px] border-opacity-40"
+            placeholder="I'd like for you to reach me for..." required />
+        </div>
+        <div class="mb-5">
+          <label class="block mb-2 text-sm font-medium text-primary focus:border-primary">Message</label>
+          <textarea
+            class="bg-black text-sm rounded-lg block w-full p-2.5 h-48 border-white border-[1px] border-opacity-40 resize-none"
+            placeholder="Your message here" required></textarea>
+        </div>
+        <button type="submit"
+          class="text-white bg-primary hover:text-primary hover:bg-white font-medium rounded-lg shadow-lg text-sm w-full px-5 py-2.5 text-center transition duration-500">Submit</button>
+      </form>
+    </section>
+  </div>
+  <footer>
+    <div class="text-center my-8">
+      <p>&copy; 2024 Miguel Arroyo. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+<script src="/static/js/functions.js"></script>
+
+</html>
